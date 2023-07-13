@@ -12,7 +12,7 @@ client = supabase.create_client(supabase_url, supabase_key)
 def insert_filled_ld(idld, radicado, ldname):
     try:
         # insert_query = f"INSERT INTO {table_name} (Idld, Ldname, Radicado) VALUES ({idld, ldname, radicado})"
-        response = client.table(table_name).insert({"idld": idld, "Ldname": ldname, "Num_radicado": radicado }).execute()
+        response = client.table(table_name).insert({"idld": idld, "Ldname": ldname, "Num_radicado": radicado, }).execute()
         print(response)
     except Exception as e:
         raise e
