@@ -17,5 +17,4 @@ dependencies:
     - undetected-chromedriver==3.5.0  #https://pypi.org/project/undetected-chromedriver/
     - TwoCaptcha==0.0.1           #https://pypi.org/project/TwoCaptcha/
     - supabase==1.0.3             #https://pypi.org/project/supabase/
-    - zcrmsdk==3.1.0              #https://pypi.org/project/zcrmsdk/
     

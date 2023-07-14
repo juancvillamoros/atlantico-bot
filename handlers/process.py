@@ -40,7 +40,7 @@ def step_one(persona, fullname, idType, document_id, NombreRepresentateLegal):
                         if idType == "CC":
                             persona = "Natural"
                             #Seleccionar el tipo de documento
-                            browser.select_from_list_by_value("//*[@id='bs-select-1-0']", "Cedula de ciudadania")
+                            browser.select_from_list_by_value("//*[@id='bs-select-1-0'] ,Cedula de ciudadania")
                             #Tipear el número de documento
                             browser.input_text("//*[@id='id']", document_id)
                             #Tipear el nombre

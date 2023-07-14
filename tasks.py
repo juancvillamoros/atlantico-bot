@@ -4,11 +4,7 @@ from services.supabase import check_DB_for_LD
 from services.variable_coder import *
 from utility.handlers_process_utils import handle_error, log_message
 from RPA.Robocorp.WorkItems import WorkItems
-from zcrmsdk import ZCRMRestClient
 
-# Configurar el cliente de Zoho CRM
-ZCRMRestClient.initialize()
-oAuthClient = ZCRMRestClient.get_instance().generate_oauth_client()
 
 workitem = WorkItems()
 workitem.get_input_work_item()
@@ -30,7 +26,7 @@ persona, tipo_de_documento = encode_idtpe(idtype)
 idld= workitem.get_work_item_variable("idld")
 document_type = workitem.get_work_item_variable("document_type")
 ldname = workitem.get_work_item_variable("ldname")
-placa_vehiculo = workitem.delete_work_item_variable("Placa_vehiculo")
+placa_vehiculo = workitem.get_work_item_variable("Placa_vehiculo")
 
 # Resto del código
 def robot_atlantico():
